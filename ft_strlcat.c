@@ -6,7 +6,7 @@
 /*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 13:18:12 by abouabba          #+#    #+#             */
-/*   Updated: 2024/11/17 15:35:30 by abouabba         ###   ########.fr       */
+/*   Updated: 2024/11/17 16:54:19 by abouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	i = dst_len;
 	while (src[j] && i < dstsize - 1)
 		dst[i++] = src[j++];
-
 	dst[i] = '\0';
 	return (dst_len + src_len);
 }
