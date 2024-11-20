@@ -6,12 +6,11 @@
 /*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 18:09:10 by abouabba          #+#    #+#             */
-/*   Updated: 2024/11/17 15:16:23 by abouabba         ###   ########.fr       */
+/*   Updated: 2024/11/19 22:02:27 by abouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <libc.h>
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

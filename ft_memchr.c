@@ -6,7 +6,7 @@
 /*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 16:10:57 by abouabba          #+#    #+#             */
-/*   Updated: 2024/10/30 18:25:00 by abouabba         ###   ########.fr       */
+/*   Updated: 2024/11/19 21:00:25 by abouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (str[i] == sh)
-		{
-			return ((char *) str + i);
-		}
+			return (str + i);
 		i++;
 	}
 	return (NULL);

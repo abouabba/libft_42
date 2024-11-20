@@ -6,7 +6,7 @@
 /*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 12:51:30 by abouabba          #+#    #+#             */
-/*   Updated: 2024/11/17 15:12:04 by abouabba         ###   ########.fr       */
+/*   Updated: 2024/11/19 01:46:33 by abouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,7 @@ void	copyintoarray(long nb, size_t i, char *p)
 {
 	while (nb > 0)
 	{
-		i--;
-		p[i] = (nb % 10) + '0';
+		p[--i] = (nb % 10) + '0';
 		nb /= 10;
 	}
 }
@@ -47,7 +46,7 @@ char	*ft_itoa(int n)
 
 	i = alloction(n);
 	nb = n;
-	p = (char *) malloc(sizeof(char) * (i + 1));
+	p = (char *)malloc(sizeof(char) * (i + 1));
 	if (!p)
 		return (0);
 	p[i] = '\0';

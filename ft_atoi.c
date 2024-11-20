@@ -6,7 +6,7 @@
 /*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 11:10:29 by abouabba          #+#    #+#             */
-/*   Updated: 2024/11/17 11:54:29 by abouabba         ###   ########.fr       */
+/*   Updated: 2024/11/18 18:20:16 by abouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,9 @@ int	ft_atoi(const char	*str)
 	i = 0;
 	n = 0;
 	a = 1;
-	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
-	{
+	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t' || str[i] == '\v'
+		|| str[i] == '\f' || str[i] == '\r')
 		i++;
-	}
 	if (str[i] == '+' || str[i] == '-')
 	{
 		if (str[i] == '-')
