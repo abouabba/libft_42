@@ -6,7 +6,7 @@
 /*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 18:09:10 by abouabba          #+#    #+#             */
-/*   Updated: 2024/11/19 22:02:27 by abouabba         ###   ########.fr       */
+/*   Updated: 2024/11/20 10:36:02 by abouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	char			*d;
 
 	i = 0;
-	if (!dst && !src)
-		return (0);
+	if (dst == src)
+		return (dst);
 	s = (char *)src;
 	d = (char *)dst;
 	while (i < n)

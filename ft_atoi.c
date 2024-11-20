@@ -6,17 +6,24 @@
 /*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 11:10:29 by abouabba          #+#    #+#             */
-/*   Updated: 2024/11/18 18:20:16 by abouabba         ###   ########.fr       */
+/*   Updated: 2024/11/20 10:39:36 by abouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	ft_overflow(int sing)
+{
+	if (sing == 1)
+		return (-1);
+	return (0);
+}
+
 int	ft_atoi(const char	*str)
 {
-	int	i;
-	int	n;
-	int	a;
+	int				i;
+	unsigned long	n;
+	int				a;
 
 	i = 0;
 	n = 0;
@@ -32,6 +39,8 @@ int	ft_atoi(const char	*str)
 	}
 	while (ft_isdigit(str[i]))
 	{
+		if (n > (9223372036854775807UL - str[i] - 48) / 10)
+			return (ft_overflow(a));
 		n = n * 10 + (str[i] - 48);
 		i++;
 	}
