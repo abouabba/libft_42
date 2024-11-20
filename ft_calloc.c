@@ -6,7 +6,7 @@
 /*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:15:47 by abouabba          #+#    #+#             */
-/*   Updated: 2024/11/18 22:11:16 by abouabba         ###   ########.fr       */
+/*   Updated: 2024/11/20 10:19:56 by abouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_calloc(size_t count, size_t size)
 
 	i = 0;
 	p = size * count;
-	if (p / size != count)
+	if (size && p / size != count)
 		return (0);
 	s = (unsigned char *)malloc(size * count);
 	if (!s)
