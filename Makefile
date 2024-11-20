@@ -29,8 +29,7 @@ ${NAME} :${OBJ}
 %.o:%.c ${HEADER}
 	${CC} ${CFLAGS} -c $< -o $@
 
-bonus:${BONUS_OBJ} ${OBJ}
-	${AR} ${NAME} ${BONUS_OBJ}
+bonus:${BONUS_OBJ}
 
 clean:
 	rm -f ${OBJ} ${BONUS_OBJ}

@@ -6,7 +6,7 @@
 /*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 13:18:18 by abouabba          #+#    #+#             */
-/*   Updated: 2024/11/17 15:09:00 by abouabba         ###   ########.fr       */
+/*   Updated: 2024/11/20 21:58:37 by abouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*head;
 
+	if (!content)
+		return (NULL);
 	head = malloc(sizeof(t_list));
 	if (!head)
 		return (NULL);

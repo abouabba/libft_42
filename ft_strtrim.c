@@ -6,7 +6,7 @@
 /*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 00:55:57 by abouabba          #+#    #+#             */
-/*   Updated: 2024/11/20 00:56:26 by abouabba         ###   ########.fr       */
+/*   Updated: 2024/11/20 17:03:31 by abouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	start;
 	char	*new;
 
-	if (!s1)
+	if (!s1 || !set)
 		return (NULL);
 	len_s = ft_strlen(s1);
 	start = 0;

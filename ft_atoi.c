@@ -6,7 +6,7 @@
 /*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 11:10:29 by abouabba          #+#    #+#             */
-/*   Updated: 2024/11/20 10:39:36 by abouabba         ###   ########.fr       */
+/*   Updated: 2024/11/20 18:36:05 by abouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_atoi(const char	*str)
 	}
 	while (ft_isdigit(str[i]))
 	{
-		if (n > (9223372036854775807UL - str[i] - 48) / 10)
+		if (n > (9223372036854775807UL - (str[i] - 48)) / 10)
 			return (ft_overflow(a));
 		n = n * 10 + (str[i] - 48);
 		i++;
