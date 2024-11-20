@@ -6,7 +6,7 @@
 /*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 00:46:39 by abouabba          #+#    #+#             */
-/*   Updated: 2024/11/17 15:08:54 by abouabba         ###   ########.fr       */
+/*   Updated: 2024/11/20 10:44:53 by abouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_lst;
 	t_list	*new_elem;
 
+	if (!lst || !f || !del)
+		return (NULL);
 	new_lst = NULL;
 	while (lst)
 	{
