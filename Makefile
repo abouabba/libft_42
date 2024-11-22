@@ -24,13 +24,12 @@ BONUS_OBJ=${BONUS_SRC:.c=.o}
 all :${NAME}
 
 ${NAME} :${OBJ}
-	${AR} ${NAME} ${OBJ}
 
 %.o:%.c ${HEADER}
 	${CC} ${CFLAGS} -c $< -o $@
+	${AR} ${NAME} $@
 
 bonus:${BONUS_OBJ}
-	${AR} ${NAME} ${BONUS_OBJ}
 
 clean:
 	rm -f ${OBJ} ${BONUS_OBJ}
