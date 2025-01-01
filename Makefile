@@ -34,7 +34,7 @@ bonus:${BONUS_OBJ}
 clean:
 	rm -f ${OBJ} ${BONUS_OBJ}
 
-fclean :clean
+fclean :clean   
 	rm -f ${NAME}
 
 re : fclean all
