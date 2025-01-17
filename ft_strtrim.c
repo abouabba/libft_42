@@ -28,7 +28,7 @@ char	*ft_cpy(char *dest, const char *src, size_t n)
 		i++;
 	}
 	return (dest);
-} 
+}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
